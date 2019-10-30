@@ -1,0 +1,14 @@
+{{ partial "header.html" . }}
+
+<section id=content>
+  <ul class=posts_listing>
+    {{ range where .Site.RegularPages.ByPublishDate.Reverse "Section" "notes" }}
+      <li>
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a><time> from {{ .Date.Format (.Site.Params.dateform | default "January 2006") }}</time></h2>
+      </li>
+    {{ end }}
+  </ul>
+</section>
+
+{{ partial "footer.html" . }}
+
