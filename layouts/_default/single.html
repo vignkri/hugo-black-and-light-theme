@@ -4,7 +4,7 @@
   <h1>{{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Title }} {{ end }}</h1>
 
   <div id=sub-header>
-    {{ .Date.Format (.Site.Params.dateform | default "January 2006") }} · {{ .ReadingTime }} minute read · {{ if $.Param "author" }} {{ $.Param "author" }} {{ else }} Tags: {{ $.Param "tags" }} {{ end }}
+    {{ .Date.Format (.Site.Params.dateform | default "January 2006") }} · {{ .ReadingTime }} minute read · {{ if $.Param "author" }} Author: {{ $.Param "author" }} {{ else }} Tags: {{ $.Param "tags" }} {{ end }}
   </div>
 
   <div class="entry-content">
